@@ -16,4 +16,4 @@ A real-time weather application built with Vanilla JS that adapts to your enviro
 ## 📸 How to Run
 1. Clone the repository.
 2. Open `index.html` in your browser.
-3. Enter your OpenWeatherMap API key in `script.js`.
+3. Enter your OpenWeatherMap API key in `naitik.js`.
