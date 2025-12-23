@@ -12,7 +12,7 @@ A real-time weather application built with Vanilla JS that adapts to your enviro
 ## 🛠️ Tech Stack
 - **Frontend:** HTML5, CSS3 (Custom Variables), JavaScript (ES6+)
 - **API:** OpenWeatherMap API
-- **Deployment:** [Add your GitHub Pages link here]
+- **Deployment:** [Live Dashboard](https://naitikrishna.github.io/weather-dashboard/)
 
 ## 📸 How to Run
 1. Clone the repository.
