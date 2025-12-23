@@ -56,6 +56,28 @@ function saveToRecent(city) {
     }
 }
 
+
+function debounce(func, delay = 600) {
+    let timeoutId;
+    return (...args) => {
+        if (timeoutId) clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            func.apply(null, args);
+        }, delay);
+    };
+}
+
+const optimizedSearch = debounce((city) => {
+    fetchWeather(`q=${city}`);
+});
+
+document.getElementById('cityInput').addEventListener('input', (e) => {
+    const city = e.target.value.trim();
+    if (city.length > 2) { // Only search if more than 2 letters
+        optimizedSearch(city);
+    }
+});
+
 function renderRecents() {
     const container = document.getElementById('recentSearches');
     const recents = JSON.parse(localStorage.getItem('recentCities')) || [];
