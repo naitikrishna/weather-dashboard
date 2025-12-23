@@ -18,5 +18,9 @@ A real-time weather application built with Vanilla JS that adapts to your enviro
 2. Open `index.html` in your browser.
 3. Enter your OpenWeatherMap API key in `script.js`.
 
+## Performance Optimization: Input Debouncing
+* Implemented a **Custom Debounce Function** to limit API rate-consumption.
+* Reduced redundant network overhead by delaying execution until the user completes their input string, optimizing for lower-bandwidth environments.
+
 ## 🔗 Live Demo
 [View the Live Project Here](https://naitikrishna.github.io/weather-dashboard/)
