@@ -41,10 +41,21 @@ function updateUI(data) {
 }
 
 function getLocation() {
-    navigator.geolocation.getCurrentPosition(pos => {
-        fetchWeather(`lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`);
-    });
+    if (navigator.geolocation) {
+        // This is the Native Browser API for coordinate-based data fetching
+        navigator.geolocation.getCurrentPosition((position) => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            fetchWeather(`lat=${lat}&lon=${lon}`);
+        }, (error) => {
+            alert("Location access denied. Please enter city manually.");
+        });
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
 }
+
+document.getElementById('geoBtn').addEventListener('click', getLocation);
 
 function saveToRecent(city) {
     let recents = JSON.parse(localStorage.getItem('recentCities')) || [];
