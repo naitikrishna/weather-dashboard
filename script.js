@@ -1,6 +1,6 @@
 const apiKey = '0bade5601caec8b98016ed6c244c2aec'; 
 
-// Event Listeners
+
 document.getElementById('searchBtn').addEventListener('click', () => {
     const city = document.getElementById('cityInput').value;
     if (city) fetchWeather(`q=${city}`);
