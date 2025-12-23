@@ -7,6 +7,7 @@ A real-time weather application built with Vanilla JS that adapts to your enviro
 - **Persistence:** Remembers your last 5 searches using browser `LocalStorage`.
 - **Geolocation:** One-tap weather updates for your current coordinates.
 - **Responsive Design:** Works on desktop, tablet, and mobile.
+- Utilized the **Fetch API** with a try...catch architecture to manage asynchronous requests to the OpenWeatherMap REST endpoint.
 
 ## 🛠️ Tech Stack
 - **Frontend:** HTML5, CSS3 (Custom Variables), JavaScript (ES6+)
